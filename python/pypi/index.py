@@ -6,7 +6,7 @@ import os
 dotenv.load_dotenv()
 
 def scrape_headlines(headline: str):
-    google_link = " https://www.googleapis.com/customsearch/v1?key=AIzaSyDqADL83h0tqLfIhUV4vZRiXx1pyTSJ0mg&cx=25b94c815e8514e88&q=" + headline
+    google_link = " https://www.googleapis.com/customsearch/v1?key=api-key&cx=25b94c815e8514e88&q=" + headline
     google_data = requests.get(google_link).json()
 
     google_ans = ""
