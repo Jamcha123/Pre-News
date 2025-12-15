@@ -9,12 +9,17 @@ Newsly uses several search engines:
 
     - Brave Search API
 
-    - Ollama Search API 
-
     - Perplexity Search API 
 
-    - OpenAI Search API 
+Then OpenAI GPT-4.1 model compiles all the data and lists the outcomes (you inputed) from least to most likely using the search results.
 
-Then OpenAI compiles all the data and lists the outcomes (you inputed) from least to most likely using the search results.
+types of APIs:
+
+   1. Free API for summarizing news
+
+   2. Basic API for finding every person      mentioned in the news, $0.10/request
+
+   3. Pro API for ranking outcomes based on likelihood,$0.20/request
+
 
 Disclaimer: Newsly cannot predict perfectly and should take it as a grain of salt
