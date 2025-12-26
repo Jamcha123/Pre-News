@@ -1,7 +1,10 @@
-# Newsly
-Newsly analyzes a news headline and a list of outcome and finds the most likely outcome.
+# Newsly - Analyze Polymarket Events
 
-Newsly is a AI tool that analyzes a news headline and a list of potential outcomes and lists them from least to most likely.
+Newsly analyzes a inputed polymarket event headline and gives a 0 out of 10 likelihood score of every question.
+
+Newsly is a AI tool uses gemini api and web search to rank every polymarket event question (0 is never happening and 10 is guaranteed to happen)
+
+disclaimer: "guaranteed" is only based of the Newsly App on AI and Web searches, it is NOT perfect and can be wrong.
 
 Newsly uses several search engines:
 
@@ -11,15 +14,14 @@ Newsly uses several search engines:
 
     - Perplexity Search API 
 
-Then OpenAI GPT-4.1 model compiles all the data and lists the outcomes (you inputed) from least to most likely using the search results.
+Then GCP model gemini api compiles all the data from the web searches and then outputs a likelihood score of every polymarket event question.
 
-types of APIs:
+It uses polymarkets official market fetching api to get all the questions about your inputed event.
 
-   1. Free API for summarizing news
+the polymarket event you enter is the polymarket slug in the URL on polymarket site.
 
-   2. Basic API for finding every person mentioned in the news stories, $0.10/request
+polymarket.com/event/<the event name you enter into Newsly>
 
-   3. Pro API for ranking outcomes based on likelihood,$0.20/request
+pricing: $0.20 per request but you get a free $1 credit.
 
-
-Disclaimer: Newsly cannot predict perfectly and should NOT be used for betting or gambling 
+hope you enjoy it and have a fun time.
