@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Special+Gothic:wght@400..700&display=swap');
+@import "tailwindcss";
+
+h1, p, input, button, textarea, li p, h1 a, a{
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+}
+.colours{
+    background-size: 300%;
+    animation: value 100s ease-in-out infinite;
+}
+@keyframes value {
+    from, to{background-position-x: 0%;}
+    50%{background-position-x: 300%;}
+}
+@keyframes changing{
+    from, to{scale: 1}
+    50%{scale: 0.25;}
+}
+.dots:nth-child(1), .dots:nth-child(4), .dots:nth-child(7){
+    animation: changing 5s ease-in-out infinite;
+}
+.dots:nth-child(2), .dots:nth-child(5), .dots:nth-child(8){
+    animation: changing 10s ease-in-out infinite;
+}
+.dots:nth-child(3), .dots:nth-child(6), .dots:nth-child(9){
+    animation: changing 15s ease-in-out infinite;
+}
+@layer components{
+    .loading_container{
+        @apply relative w-[75%] h-[75%] m-auto p-0 bg-transparent
+        grid grid-cols-3 grid-rows-3 gap-10 
+    }
+    .dots{
+        @apply relative w-[50%] h-full m-auto p-0 bg-white
+    }
+    .tags{
+        @apply relative w-full h-full m-auto p-0 bg-transparent
+        flex flex-col align-middle gap-10
+    }
+    .items{
+        @apply relative w-full min-h-fit m-auto p-0 bg-linear-75 from-slate-950 via-slate-900 to-slate-800
+        flex flex-col align-middle justify-center text-center
+    }
+    .title{
+        @apply text-2xl text-white font-medium mt-[5%]
+    }
+    .text{
+        @apply text-xl text-white font-light mt-[5%] mb-[10%]
+    }
+    .text:nth-child(3){
+        @apply text-gray-300 hidden
+    }
+    .rows1, .rows2, .rows{
+        @apply relative w-full h-[10em] m-auto p-0 bg-transparent
+        hidden flex-row justify-evenly text-center align-middle mb-[5%]
+    }
+    .rows2{
+        @apply h-[5em]
+    }
+    .button1, .button2{
+        @apply relative w-[13em] h-[3em] m-auto p-0 bg-transparent border-white border-2
+        flex flex-col align-middle justify-center text-center text-xl font-light cursor-pointer
+        scale-[1] hover:scale-[0.9] active:scale-[1.1] transition-all duration-100
+    }
+    .button1{
+        @apply bg-red-900 text-white
+    }
+    .button2{
+        @apply bg-green-900 text-white
+    }
+    .price1, .price2{
+        @apply text-xl font-medium m-auto
+    }
+    .price1{
+        @apply text-green-400 
+    }
+    .price2{
+        @apply text-red-400 
+    }
+}
