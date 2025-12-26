@@ -1,5 +1,7 @@
 # Newsly - Analyze Polymarket Events
 
+web app: https://newsly.studio
+
 Newsly analyzes a inputed polymarket event headline and gives a 0 out of 10 likelihood score of every question.
 
 Newsly is a AI tool uses gemini api and web search to rank every polymarket event question (0 is never happening and 10 is guaranteed to happen)
